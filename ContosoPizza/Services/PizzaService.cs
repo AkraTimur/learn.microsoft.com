@@ -1,5 +1,4 @@
 ﻿using ContosoPizza.Models;
-using System.Xml.Linq;
 
 namespace ContosoPizza.Services
 {
@@ -15,7 +14,7 @@ namespace ContosoPizza.Services
             new Pizza { Id = 2, Name = "Veggie", IsGlutenFree = true }
             };
         }
-
+        
         public static List<Pizza> GetAll() => Pizzas;
 
         public static Pizza? Get(int id) => Pizzas.FirstOrDefault(p => p.Id == id);
