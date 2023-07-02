@@ -13,15 +13,15 @@ builder.Services.AddSwaggerGen(c =>
 });
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
-
-app.UseCors("some unique string");
-
 app.UseSwagger();
 
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Todo API V1");
 });
+
+app.MapGet("/", () => "Hello World!");
+
+
 
 app.Run();
