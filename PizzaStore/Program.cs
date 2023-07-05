@@ -22,6 +22,4 @@ app.UseSwaggerUI(c =>
 
 app.MapGet("/", () => "Hello World!");
 
-
-
 app.Run();
